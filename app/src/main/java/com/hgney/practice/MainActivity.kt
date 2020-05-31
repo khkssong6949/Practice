@@ -1,5 +1,6 @@
 package com.hgney.practice
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -30,6 +31,12 @@ class MainActivity : AppCompatActivity() {
             else{
                 Log.d("로그인 실패.",idInput)
                 Toast.makeText(this,"로그인에 실패하였습니다", Toast.LENGTH_SHORT).show()
+            }
+
+            signUpBtn.setOnClickListener {
+
+                val myIntent = Intent(this, SignUpActivity::class.java)
+                startActivity(myIntent)
             }
 
         }
